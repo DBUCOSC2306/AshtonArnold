@@ -96,10 +96,7 @@ public class ArrayStack<T> implements StackADT<T>
      */
     public boolean isEmpty()
     {
-        if (top == 0)
-			return true;
-		else
-			return false;
+        // TODOCOSC2306
     }
  
     /**
@@ -108,7 +105,7 @@ public class ArrayStack<T> implements StackADT<T>
      */
     public int size()
     {
-        return top;
+        // TODOCOSC2306
     }
 
     /**
@@ -117,12 +114,7 @@ public class ArrayStack<T> implements StackADT<T>
      */
     public String toString()
     {
-        String result = "";
-        for(int i = (top-1); i > -1; i--)
-        {
-            result = result + stack[i].toString() + " ";
-        }
-	return result;
+        // TODOCOSC2306
     }
 }
 
