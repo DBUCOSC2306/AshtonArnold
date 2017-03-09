@@ -37,8 +37,8 @@ public class ArrayOrderedList<T> extends ArrayList<T>
      */
     public void add(T element)
     {
-		if (!(element instanceof Comparable))
-			throw new NonComparableElementException("OrderedList");
+		//if (!(element instanceof Comparable))
+			//throw new NonComparableElementException("OrderedList");
 		
 		Comparable<T> comparableElement = (Comparable<T>)element;
         

@@ -36,7 +36,19 @@ public class ArrayUnorderedList<T> extends ArrayList<T>
      */
     public void addToFront(T element)
     {
-        // To be completed as a Programming Project
+        if (size() == count)
+            expandCapacity();
+       if(count > 0)
+       {
+            for(int i = rear+1; i > 0; i--)
+            {    
+                list[i] = list[i-1];
+            //count--;
+            }
+       }
+        list[0] = element;
+        rear = count;
+        count++;
     }
 
     /**
@@ -46,7 +58,12 @@ public class ArrayUnorderedList<T> extends ArrayList<T>
      */
     public void addToRear(T element)
     {
-        // To be completed as a Programming Project
+        if (size() == count)
+            expandCapacity();
+        
+        list[rear+1] = element;
+        rear = count;
+        count++;
     }
 
     /**
@@ -68,7 +85,7 @@ public class ArrayUnorderedList<T> extends ArrayList<T>
             scan++;
       
         if (scan == rear)
-            throw new ElementNotFoundException("UnorderedList");
+            //throw new ElementNotFoundException("UnorderedList");
     
         scan++;
 		

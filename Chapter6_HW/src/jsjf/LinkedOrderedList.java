@@ -30,6 +30,35 @@ public class LinkedOrderedList<T> extends LinkedList<T>
 	 */
     public void add(T element)
     {
-        // To be completed as a Programming Project
+        count++;
+        
+        if (isEmpty())
+        {
+            head = tail = new LinearNode<T>(element);
+            return;
+        }
+        
+        Comparable<T> temp = (Comparable<T>)element;
+        LinearNode<T> prev = null;
+        LinearNode<T> cursor = head;
+        
+        while (cursor != null && temp.compareTo(cursor.getElement()) > 0)
+        {
+            prev = cursor;
+            cursor = cursor.getNext();
+        }
+        
+        LinearNode<T> newNode = new LinearNode<T>(element);
+        
+        if (prev == null)
+        {
+            newNode.setNext(head);
+            head = newNode;
+            tail = head.getNext();
+            return;
+        }
+        
+        prev.setNext(newNode);
+        newNode.setNext(cursor);
     }
 }
