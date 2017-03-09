@@ -97,18 +97,7 @@ public class CircularArrayQueue<T> implements QueueADT<T>
      */
     public T first() throws EmptyCollectionException
     {
-        try
-        {
-            if (isEmpty())
-                throw new EmptyCollectionException("CircArrayQueue");
-            else
-                return queue[front];
-        }
-        catch(EmptyCollectionException e)
-        {
-            System.out.println("ERROR! This cannot be done because the Queue is empty!");
-        }
-        return null;
+        // To be completed as a Programming Project
     }
   
     /**
@@ -117,10 +106,7 @@ public class CircularArrayQueue<T> implements QueueADT<T>
      */
     public boolean isEmpty()
     {
-        if (count <= 0)
-            return true;
-        else
-            return false;
+        // To be completed as a Programming Project
     }
   
     /**
@@ -129,7 +115,7 @@ public class CircularArrayQueue<T> implements QueueADT<T>
      */
     public int size()
     {
-        return count;
+        // To be completed as a Programming Project
     }
   
     /**
@@ -138,10 +124,6 @@ public class CircularArrayQueue<T> implements QueueADT<T>
      */
     public String toString()
     {
-        String x = "";
-        for(int i = 0; i < count; i++)
-        
-            x = x + queue[i].toString() + " ";
-        return x;
+        // To be completed as a Programming Project
     }
 }
